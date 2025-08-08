@@ -2,10 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projects | Bhavani</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('projects') }}" class="active">Projects</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('resume') }}" class="active">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <h1>My Projects</h1>
+
+        <div class="project-list">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h2>Billing System (Flask)</h2>
+                <p>A web-based billing system using Python and Flask for managing invoices and customers.</p>
+                <p><strong>Technologies:</strong> Flask, HTML, CSS, SQLite</p>
+                <a href="https://github.com/yourusername/billing-system" target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h2>Portfolio Website</h2>
+                <p>This very portfolio site you're browsing! Built from scratch using Flask and deployed online.</p>
+                <p><strong>Technologies:</strong> Flask, HTML, CSS, JavaScript</p>
+                <a href="https://github.com/yourusername/portfolio-website" target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h2>To-Do App</h2>
+                <p>A simple task management app that allows users to add, update, and delete to-dos.</p>
+                <p><strong>Technologies:</strong> JavaScript, HTML, CSS</p>
+                <a href="https://github.com/yourusername/todo-app" target="_blank" class="btn">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bhavani. All rights reserved.</p>
+    </footer>
 </body>
 </html>

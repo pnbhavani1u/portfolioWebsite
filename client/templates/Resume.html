@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bhavani | Portfolio</title>
+    <title>Resume | Bhavani</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
@@ -18,10 +18,16 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Hello, I'm Bhavani</h1>
-        <p>A passionate software developer.</p>
-        <a href="{{ url_for('projects') }}" class="btn">View My Work</a>
+    <section class="resume">
+        <h1>My Resume</h1>
+        
+        <div class="resume-actions">
+            <a class="btn" href="{{ url_for('static', filename='files/resume.pdf') }}" target="_blank" download>Download Resume (PDF)</a>
+        </div>
+
+        <div class="resume-viewer">
+            <iframe src="{{ url_for('static', filename='files/resume.pdf') }}" frameborder="0"></iframe>
+        </div>
     </section>
 
     <footer>

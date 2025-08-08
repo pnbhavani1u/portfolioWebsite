@@ -2,10 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact | Bhavani</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('contact') }}" class="active">Contact</a></li>
+                <li><a href="{{ url_for('resume') }}" class="active">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contact Me</h1>
+        <p class="contact-intro">Have a question or want to work together? Fill out the form below or reach out via email.</p>
+
+        <form method="POST" action="/contact" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bhavani. All rights reserved.</p>
+    </footer>
 </body>
 </html>
